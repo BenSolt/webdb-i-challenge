@@ -5,33 +5,43 @@ const router = express.Router();
 
 const AccInfo = require('../dbConfig');
 
-router.get("/", asnyc (req, res, next) => {
+router.get("/", async (req, res, next) => {
     try{
 
+    } catch (err){
+        next(err)
     }
 })
 
-router.get("/:id", asnyc (req, res, next) => {
+router.get("/:id", async (req, res, next) => {
     try{
 
+    }catch (err){
+        next(err)
     }
 })
 
-router.post("/", asnyc (req, res, next) => {
+router.post("/", async (req, res, next) => {
     try{
 
+    }catch (err){
+        next(err)
     }
 })
 
-router.put("/:id", asnyc (req, res, next) => {
+router.put("/:id", async (req, res, next) => {
     try{
 
+    }catch (err){
+        next(err)
     }
 })
 
-router.delete("/:id", asnyc (req, res, next) => {
+router.delete("/:id", async (req, res, next) => {
     try{
 
+    } catch (err) {
+        next(err)
     }
 })
 
