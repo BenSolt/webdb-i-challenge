@@ -7,7 +7,8 @@ const AccInfo = require('../dbConfig');
 
 router.get("/", async (req, res, next) => {
     try{
-
+        //translates to SELECT * FROM posts
+        res.json(await db.select("*").from("posts"))
     } catch (err){
         next(err)
     }
@@ -15,7 +16,7 @@ router.get("/", async (req, res, next) => {
 
 router.get("/:id", async (req, res, next) => {
     try{
-
+       res.json(await db.select("*").from("posts").where("id", req.params.id))
     }catch (err){
         next(err)
     }
